@@ -6,10 +6,5 @@ d = {}
 for x in infile:
     if len(x) < 5:
         continue
-    code = x[0:5]
-    while code[-1] == " ":
-        code = code[:-1]
-    k = code
-    v = x[5:]
-    d[k] = v.strip()
+    d[x[0:5].strip()] = x[5:].strip()
 print d
